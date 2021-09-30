@@ -17,7 +17,7 @@
         crossorigin="anonymous"></script>
     <script type="text/javascript">
         function iframeLoaded() {
-            var iFrameID = document.getElementById('idIframe');
+            var iFrameID = document.getElementById('whosComingIframe');
             if (iFrameID) {
                 // here you can make the height, I delete it first, then I make it again
                 iFrameID.height = "";
@@ -42,7 +42,7 @@
             <h4>
                 These amazing people have all booked in to NZYC22!
             </h4>
-            <iframe src="https://sleepy-ride-045c1c.netlify.app" onload="iframeLoaded()" style="width: 100%; border: none;"/>
+            <iframe id="whosComingIframe" src="https://sleepy-ride-045c1c.netlify.app" onload="iframeLoaded()" style="width: 100%; border: none;"/>
             <!-- <br />
             <p>Abi O’Grady</p>
             <p>Alan Tunnell</p>
