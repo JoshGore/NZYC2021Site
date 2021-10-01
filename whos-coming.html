@@ -24,6 +24,16 @@
                 iFrameID.height = iFrameID.contentWindow.document.body.scrollHeight + "px";
             }
         }
+        window.addEventListener('message', function (e) {
+            var $iframe = jQuery("#whosComingIframe");
+            var eventName = e.data[0];
+            var data = e.data[1];
+            switch (eventName) {
+                case 'setHeight':
+                    $iframe.height(data);
+                    break;
+            }
+        }, false);
     </script>
 </head>
 
@@ -42,7 +52,8 @@
             <h4>
                 These amazing people have all booked in to NZYC22!
             </h4>
-            <iframe id="whosComingIframe" src="https://sleepy-ride-045c1c.netlify.app" onload="iframeLoaded()" style="width: 100%; border: none;"/>
+            <iframe id="whosComingIframe" src="https://sleepy-ride-045c1c.netlify.app" onload="iframeLoaded()"
+                style="width: 100%; border: none;" />
             <!-- <br />
             <p>Abi O’Grady</p>
             <p>Alan Tunnell</p>
